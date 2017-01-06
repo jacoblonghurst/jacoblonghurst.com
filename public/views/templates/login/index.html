@@ -1,0 +1,47 @@
+<body class="login section">
+  <section>
+  <div id="wrapper">
+    <div id="content">
+      <div id="nav">
+        <nav>
+          <ul class="nav">
+            <li class="right"><a class="button menu left">Login</a></li>
+            <li class="right"><a class="button menu left">Create Account</a></li>
+            <li class="right"><a href="index.html" class="left button menu">Home</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="parallax-lg parallax-bg-10">
+        <div class="container" ng-controller="LoginController as loginCtrl" >
+          <div class="row">
+            <div class="span12 center div" style="margin-bottom: 125px;">
+              <p class="header40 white" style="letter-spacing: 10px; margin: 50px 0 30px 0;">Jacob Longhurst</p>
+              <button class="m20 button alt blue" id="create">Create Account</button>
+              <button class="m20 button alt blue" id="login" ng-click="active = true">Login</button>
+            </div>
+          </div>
+<!-- ng-show="active" -->
+          <div class="row" >
+            <div class="span12 login-form">
+              <form>
+                <div style="text-align: center;">
+                  <div style="display: inline-block;">
+
+                    <label for="username" class="white header20">Username</label><br />
+                    <input type="text" name="username" id="username" ng-model="username" class="login field"  />
+                  </div>
+                  <div style="display: inline-block">
+                    <label for="password" class="white">Password</label><br />
+                    <input type="password" name="password" id="password" ng-model="password" class="login field m20" />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>

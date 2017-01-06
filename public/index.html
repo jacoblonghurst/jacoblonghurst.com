@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html ng-app="JacobLonghurst">
 <head>
 <title>Jacob Longhurst</title>
@@ -5,75 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS AND FONT LINKS -->
-    <link href="/assets/css/stylesheet.css" rel="stylesheet" type="text/css" />
-    <link href="/assets/images/favicon.png" rel="shortcut icon">
+    <link href="assets/css/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="assets/images/favicon.png" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,100i,300,300i,400,400i,600,600i,700,700i|Open+Sans+Condensed:300,300i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="/assets/geocomplete/examples/styled.css" />
-    <link type="text/css" rel="stylesheet" href="/assets/uniform/themes/agent/css/uniform.agent.css" media="screen" charset="utf-8" />
-    <link type="text/css" rel="stylesheet" href="/assets/uniform/themes/agent/css/uniform.agent.min.css" media="screen" charset="utf-8" />
-    <link type="text/css" rel="stylesheet" href="/assets/css/grid.css" />
+    <link href="assets/css/grid.css" type="text/css" rel="stylesheet"  />
 
     <!-- /// FontAwesome Icons 4.3.0 ////////  -->
-    <link rel="stylesheet" href="/assets/fonts/fontawesome/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="assets/fonts/fontawesome/font-awesome.min.css"> -->
     <!-- /// Custom Icon Font ////////  -->
-    <link rel="stylesheet" href="/assets/fonts/iconfontcustom/icon-font-custom.css">
+    <!-- <link rel="stylesheet" href="assets/fonts/iconfontcustom/icon-font-custom.css"> -->
 
 </head>
 
-<body>
-    <div id="wrapper">
-        <div id="content">
-            <div class="parallax main">
-                <div id="nav">
-                    <nav>
-                        <ul class="nav">
-                            <li class="right"><a href="login.php" class="button menu left">Login</a></li>
-                            <li class="right"><a href="create.php" class="button menu left">Create Account</a></li>
-                            <li class="right"><a href="index.php" class="left button menu">Home</a></li>
-                        </ul>
-                    </nav>
-                </div><br />
-
-            <div ng-view>
-                <div class="row">
-                    <div class="span12 center div">
-                        <button class="m20 button alt blue" id="create">Create Account</button><button class="m20 button alt blue" id="login">Login</button>
-                        <p class="login header">Please login or create an account</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="span12">
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
+<body id="body" class="login section">
+    <div ng-view>
     </div>
+
 </body>
 
 <!-- SCRIPT FILES AND CDN'S -->
-<script src="/assets/js/jQuery.js"></script>
-<script src="/assets/js/script.js"></script>
-<script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
-<script src="/assets/uniform/lib/jquery.uniform.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="/assets/geocomplete/jquery.geocomplete.js"></script>
-<script src="/assets/geocomplete/examples/logger.js"></script>
+<!-- <script src="assets/js/jQuery.js"></script>
+<script src="assets/js/script.js"></script> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
 
 <!-- Angular App -->
-<script src="/assets/js/vendor/angular.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
-<script src="/assets/js/vendor/angular-route.js"></script>
-<script src="/assets/js/app.js"></script>
+<!-- <script src="assets/js/vendor/angular.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-resource.js"></script>
+<!-- <script src="assets/js/vendor/angular-route.js"></script> -->
+<script src="components/app.js"></script>
 
 <!-- Directives -->
-<script src="/components/directives/navHeader.js"></script>
-
+<script src="components/directives/navigation.js"></script>
+<script src="components/directives/templateSection.js"></script>
+<script src="components/controllers/loginController.js"></script>
 <!-- Controllers -->
 
 </html>

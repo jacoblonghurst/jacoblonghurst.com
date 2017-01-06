@@ -31,6 +31,6 @@ mongoose.connect(mongoURI);
 mongoose.connection.once("open", function(){
   console.log("Connected to Mongo DB at ", mongoURI);
   app.listen(port, function(){
-    console.log("T-rex", port);
+    console.log("Jake the Snake", port);
   });
 });

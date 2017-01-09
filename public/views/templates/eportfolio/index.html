@@ -1,0 +1,35 @@
+<section>
+  <div id="wrapper">
+    <div id="content">
+      <navigation></navigation>
+      <div class="container" ng-controller="eportfolioController">
+        <div class="row">
+          <div class="span12">
+            <p class="header50">Choose The Field of Study</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="span4">
+            <div>
+              <button class="button alt blue" ng-click="activePhysics = true">Physics</button>
+              <div ng-show="activePhysics">
+                <button class="button" ng-click="physics1010 = true">Physics 1010</button>
+
+                <div ng-show="physics1010">
+                  <p> Testing testing</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="span4">
+            <div>
+              <button class="button alt blue" ng-click="activeHistory = true">History</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

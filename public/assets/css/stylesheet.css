@@ -384,7 +384,7 @@ button {
 	overflow-y: hidden;
 }
 .login.field:focus {
-	box-shadow: 0 0 4px #66AFE9, 0 0 15px rgba(102, 175, 233, .6);
+	box-shadow: 0 0 6px black, 0 0 15px rgba(102, 175, 233, .6);
 	outline: none;
 }
 .login.field {

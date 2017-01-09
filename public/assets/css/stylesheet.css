@@ -9,12 +9,12 @@ body {
 	padding: 0;
 	bottom: 0;
 	overflow-x: hidden;
-	overflow-y: auto;
+	overflow-y: hidden;
 	height: 100%;
 }
 #wrapper {
-	min-height:100%;
-	position:relative;
+	min-height: 100%;
+	position: relative;
 }
 #content {
 	padding-bottom: 100px; /* Height of the footer element */
@@ -205,10 +205,10 @@ input[type=textarea]:focus {
 	width: auto;
 	text-align: center;
 	color: white;
-	font-size: 15px;
+	font-size: 17px;
 	cursor: pointer;
 	pointer-events: pointer;
-	letter-spacing: 2px;
+	letter-spacing: 3px;
 	-webkit-transition-duration: .4s;
 	   -moz-transition-duration: .4s;
 	     -o-transition-duration: .4s;
@@ -216,6 +216,7 @@ input[type=textarea]:focus {
 	border: 1px solid black;
 	outline: none;
 	font-weight: normal;
+	line-height: 30px;
 }
 .left {
 	border-left: 0;
@@ -292,7 +293,7 @@ button {
   background: url("../images/logo.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto;
+  background-size: cover;
   background-attachment: fixed;
   min-height: 500px;
 }
@@ -307,6 +308,13 @@ button {
 .login.gradient {
 	background: linear-gradient(to bottom right, #00ffdc, #00ffff);
 	height: 100%;
+}
+.main.img {
+	background: url('../images/logo-small.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto;
+	min-height: 750px;
 }
 
 /*
@@ -457,6 +465,10 @@ div.nav {
 	background-color: black;
 	overflow: hidden;
 	width: auto;
+	height: 60px;
+}
+.nav.logo {
+	margin-top: -15px;
 }
 /*ul.nav li {
 	width: auto;

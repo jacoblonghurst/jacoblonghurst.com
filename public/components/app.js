@@ -2,9 +2,15 @@ angular.module('JacobLonghurst', ['ngRoute'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
-        redirectTo: '/login'
+        redirectTo: '/home'
       })
-      .when('/login', {
-        templateUrl: "../views/templates/login/index.html"
+      .when('/home', {
+        templateUrl: "../views/templates/home/index.html"
+      })
+      .when('/eportfolio', {
+        templateUrl: "../views/templates/eportfolio/index.html"
+      })
+      .when('/eportfolio/physics', {
+        templateUrl: "../views/templates/eportfolio/physics/index.html"
       })
   }]);

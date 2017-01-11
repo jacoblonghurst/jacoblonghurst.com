@@ -1,4 +1,4 @@
-angular.module('JacobLonghurst', ['ngRoute'])
+angular.module('JacobLonghurst', ['ngRoute', 'ngPDFViewer'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {

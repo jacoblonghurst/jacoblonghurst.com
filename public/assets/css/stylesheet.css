@@ -9,7 +9,6 @@ body {
 	padding: 0;
 	bottom: 0;
 	overflow-x: hidden;
-	overflow-y: hidden;
 	height: 100%;
 }
 #wrapper {
@@ -30,6 +29,9 @@ body {
 	left: 0;
 	padding: 5px;
 	position: absolute;
+}
+.body {
+	overflow-y: hidden;
 }
 
 /*------------   INPUT BOXES   ----------
@@ -314,9 +316,8 @@ button {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: auto;
-	min-height: 750px;
+	min-height: 600px;
 }
-
 /*
 ================================================
 			TITLE / HEADINGS / COLORS / TEMPLATES
@@ -384,9 +385,13 @@ button {
 
 /*
 ==================================================
-									LOGIN PAGE
+									HOME PAGE
 ==================================================
 */
+
+#home {
+	overflow-y: hidden;
+}
 
 .login.section {
 	overflow-y: hidden;
@@ -405,10 +410,20 @@ button {
 }
 
 .login.label {
-	float: left {
-
-	}
+	float: left
 }
+
+
+/*
+==================================================
+									ePortfolio Page
+==================================================
+*/
+
+
+
+
+
 /*
 ========================================================================
 						General Formatting

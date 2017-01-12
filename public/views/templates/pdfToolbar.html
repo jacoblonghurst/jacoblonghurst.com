@@ -1,0 +1,12 @@
+<div class="center div">
+  <div>
+    <a href="" ng-click="prev()" class="pdf button">Back</a>
+    <a href="" ng-click="next()" class="pdf button">Next</a>
+    <a href="" ng-click="zoomIn()" class="pdf button">Zoom In</a>
+    <a href="" ng-click="zoomOut()" class="pdf button">Zoom Out</a>
+    <a href="" ng-click="rotate()" class="pdf button">Rotate</a>
+    <span class="pdf page">Page</span>
+    <input type="text" class="pdf number" min="1" ng-model="currentPage" ng-change="goToPage()" style="width: 5%">
+    <span class="pdf page-total"> / {{pageCount}} </span>
+  </div>
+</div>

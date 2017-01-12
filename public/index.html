@@ -19,7 +19,7 @@
 
 </head>
 
-<body id="body" ng-view ng-controller="eportfolioController" ng-class=" { 'body': physics1010button } ">
+<body id="body" ng-view>
 
 </body>
 
@@ -33,11 +33,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-resource.js"></script>
 <script src="components/app.js"></script>
-<script src="assets/js/vendor/ng-pdfviewer-master/example/pdf.js"></script>
-<script src="assets/js/vendor/ng-pdfviewer-master/example/pdf.compat.js"></script>
-<script src="assets/js/vendor/ng-pdfviewer-master/example/pdf.worker.js"></script>
-<script src="assets/js/vendor/ng-pdfviewer-master/dist/ng-pdfviewer.min.js"></script>
 
+<!-- PDF Viewer Directive -->
+<script src="assets/js/vendor/pdfviewer/dist/pdf.js"></script>
+<script src="assets/js/vendor/pdfviewer/dist/pdf.compat.js"></script>
+<script src="assets/js/vendor/pdfviewer/dist/pdf.worker.js"></script>
+<script src="assets/js/vendor/pdfviewer/dist/angular-pdf-viewer.min.js"></script>
+<!-- <script src="assets/js/vendor/pdfviewer/dist/delegate-service.js"></script> -->
+<!-- <script src="assets/js/vendor/pdfviewer/dist/pdf-viewer.js"></script> -->
+<!-- <script src="assets/js/vendor/pdfviewer/dist/pdf-ctrl.js"></script> -->
+<!-- <script src="assets/js/vendor/pdfviewer/dist/pdf-viewer-delegate.js"></script> -->
+<!-- <script src="assets/js/vendor/pdfviewer/dist/pdf-viewer-toolbar.js"></script> -->
 
 <!-- Directives -->
 <script src="components/directives/navigation.js"></script>

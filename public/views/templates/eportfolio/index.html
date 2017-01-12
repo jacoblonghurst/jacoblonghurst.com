@@ -8,40 +8,57 @@
             <p class="header50">Choose The Field of Study</p>
           </div>
         </div>
-<!--
-        <div class="row">
-          <div class="span4">
-            <div>
 
+        <div class="row">
+          <div class="span12 center">
+            <div class="span4">
+              <div>
+                <button class="button alt blue center" ng-click="activePhysics = !activePhysics">Physics</button>
+              </div>
             </div>
-          </div> -->
-<!--
-          <div class="span4">
-            <div>
-              <button class="button alt blue" ng-click="activeHistory = !activeHistory">History</button>
+
+            <div class="span4">
+              <div>
+                <button class="button alt blue" ng-click="activeHistory = !activeHistory">History</button>
+              </div>
+            </div>
+
+            <div class="span4">
+              <div>
+                <button class="button alt blue" ng-click="activeEngl = !activeEngl">English</button>
+              </div>
             </div>
           </div>
+        </div>
 
-          <div class="span4">
-            <div>
-              <button class="button alt blue" ng-click="activeEngl = !activeEngl">English</button>
-            </div>
-          </div> -->
-        <!-- </div> -->
-
+        <!-- PHYSICS SECTION -->
         <div class="row">
-          <div class="span12">
-            <button class="button alt blue center" ng-click="activePhysics = !activePhysics">Physics</button><br />
+          <div class="span12 center">
+            <br />
             <div ng-show="activePhysics">
-              <button class="button center" ng-click="physics1010 = !physics1010">Physics 1010</button>
-              <div ng-show="physics1010">
+              <button class="button alt blue center" ng-click="physics1010 = !physics1010">Physics 1010</button>
+              <div ng-show="physics1010"><br />
                 <div class="pdf-div">
-                  <button ng-click="prevPage()">&lt;</button>
-                  <button ng-click="nextPage()">&gt;</button>
                   <br />
-                  <span>{{ currentPage }} / {{ totalPages }}</span>
+                  <a href="../../../assets/files/phys1010paper.pdf" class="button alt green" style="margin-bottom: 50px;">Download</a><br />
+                  <pdf-viewer delegate-handle="my-pdf-container" url="phys1010file" scale="2" show-toolbar="true"></pdf-viewer>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HISTORY SECTION -->
+        <div class="row">
+          <div class="span12 center">
+            <br />
+            <div ng-show="activeHistory">
+              <button class="button alt blue center" ng-click="history1700 = !history1700">History 1700</button>
+              <div ng-show="history1700"><br />
+                <div class="pdf-div">
+                  <a href="../../../assets/files/phys1010paper.pdf" class="button alt green">Download</a><br />
                   <br />
-                  <pdfviewer src="../../../assets/files/phys1010paper.pdf" on-page-load="pageLoaded(page,total)" id="viewer"></pdfviewer>
+                  <pdf-viewer></pdf-viewer>
                 </div>
               </div>
             </div>

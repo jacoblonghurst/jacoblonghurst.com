@@ -1,4 +1,4 @@
-angular.module('JacobLonghurst', ['ngRoute', 'ngPDFViewer'])
+angular.module('JacobLonghurst', ['ngRoute', 'pdf'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
@@ -12,5 +12,5 @@ angular.module('JacobLonghurst', ['ngRoute', 'ngPDFViewer'])
       })
       .when('/eportfolio/physics', {
         templateUrl: "../views/templates/eportfolio/physics/index.html"
-      })
+      });
   }]);

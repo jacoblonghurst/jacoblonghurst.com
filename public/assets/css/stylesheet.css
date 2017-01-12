@@ -408,6 +408,9 @@ button {
 	margin: 0 auto;
 	padding: 0;
 }
+.mb50 {
+	margin-bottom: 50px;
+}
 
 /*
 ==================================================
@@ -446,11 +449,30 @@ button {
 ==================================================
 */
 
-.pdf-div {
-	height: 600px;
+.pdf.div {
 	margin: 0 auto;
-	font-size: 30px;
-	color: black;
+	margin-top: 25px;
+	padding: 0;
+}
+.pdf.div.phys {
+	margin: 0 auto;
+	margin-top: 25px;
+	padding: 0;
+}
+.pdf.div.hist {
+	margin: 0 auto;
+	margin-top: 24px;
+	padding: 0;
+}
+.pdf.div.engl {
+	margin: 0 auto;
+	margin-top: 23px;
+	padding: 0;
+}
+.pdf.div.cj {
+	margin: 0 auto;
+	margin-top: 22px;
+	padding: 0;
 }
 /*.pdf.container {
 	background-color: #52ADDA;

@@ -37,65 +37,42 @@
           </div>
         </div>
 
-        <!-- PHYSICS SECTION -->
-        <div class="row">
+
+        <div class="row pdf div">
           <div class="span12 center">
-            <br />
+            <!-- PHYSICS SECTION -->
             <div ng-show="activePhysics">
               <button class="button alt blue center" ng-click="physics1010 = !physics1010">Physics 1010</button>
               <div ng-show="physics1010"><br />
-                <div class="pdf-div">
-                  <br />
-                  <a href="../../../assets/files/phys1010paper.pdf" class="button alt green" style="margin-bottom: 50px;">Download</a><br />
-                  <div class="pdf container">
-                    <pdf-viewer delegate-handle="my-phys1010pdf-container" url="phys1010file" scale="1.75" show-toolbar="true"></pdf-viewer>
-                  </div>
-                </div>
+                <a href="../../../assets/files/phys1010paper.pdf" class="button alt green" style="margin-bottom: 50px;">Download</a>
+                <pdf-viewer delegate-handle="my-phys1010pdf-container" url="phys1010file" scale="1.75" show-toolbar="true"></pdf-viewer>
               </div>
             </div>
-          </div>
 
-        <!-- HISTORY SECTION -->
-          <div class="span12 center">
-            <br />
+            <!-- HISTORY SECTION -->
             <div ng-show="activeHistory">
               <button class="button alt blue center" ng-click="history1700 = !history1700">History 1700</button>
               <div ng-show="history1700"><br />
-                <div class="pdf-div">
-                  <a href="../../../assets/files/hist1700.pdf" class="button alt green">Download</a><br />
-                  <br />
-                  <pdf-viewer delegate-handle="my-hist1700pdf-container" url="hist1700file" scale="1.75" show-toolbar="true"></pdf-viewer>
-                </div>
+                <a href="../../../assets/files/hist1700.pdf" class="button alt green" style="margin-bottom: 50px;">Download</a>
+                <pdf-viewer delegate-handle="my-hist1700pdf-container" url="hist1700file" scale="1.75" show-toolbar="true"></pdf-viewer>
               </div>
             </div>
-          </div>
 
-        <!-- ENGLISH SECTION -->
-          <div class="span12 center">
-            <br />
+            <!-- ENGLISH SECTION -->
             <div ng-show="activeEngl">
               <button class="button alt blue center" ng-click="english1010 = !english1010">English 1010</button>
               <div ng-show="english1010"><br />
-                <div class="pdf-div">
-                  <a href="../../../assets/files/engl1010.pdf" class="button alt green">Download</a><br />
-                  <br />
-                  <pdf-viewer delegate-handle="my-engl1010pdf-container" url="engl1010file" scale="1.75" show-toolbar="true"></pdf-viewer>
-                </div>
+                <a href="../../../assets/files/engl1010.pdf" class="button alt green" style="margin-bottom: 50px;">Download</a>
+                <pdf-viewer delegate-handle="my-engl1010pdf-container" url="engl1010file" scale="1.75" show-toolbar="true"></pdf-viewer>
               </div>
             </div>
-          </div>
 
-        <!-- CRIMINAL JUSTICE SECTION -->
-          <div class="span12 center">
-            <br />
+            <!-- CRIMINAL JUSTICE SECTION -->
             <div ng-show="activeCriminal">
               <button class="button alt blue center" ng-click="criminal = !criminal">Criminal Justice</button>
               <div ng-show="criminal"><br />
-                <div class="pdf-div">
-                  <a href="../../../assets/files/phys1010paper.pdf" class="button alt green">Download</a><br />
-                  <br />
-                  <pdf-viewer delegate-handle="my-crimepdf-container" url="engl1010file" scale="1.75" show-toolbar="true"></pdf-viewer>
-                </div>
+                <a href="../../../assets/files/phys1010paper.pdf" class="button alt green" style="margin-bottom: 50px;">Download</a>
+                <pdf-viewer delegate-handle="my-crimepdf-container" url="engl1010file" scale="1.75" show-toolbar="true"></pdf-viewer>
               </div>
             </div>
           </div>

@@ -222,6 +222,7 @@ input[type=textarea]:focus {
 }
 .left {
 	border-left: 0;
+	float: left;
 }
 .button.menu:hover {
 	color: #52ADDA;
@@ -252,25 +253,30 @@ input[type=textarea]:focus {
 	background-color: white;
 	color: black;
 }
-/*
-.leftArrow {
-	content: "\2190";
-	background-color: white;
-	outline: none;
-	border: 1px solid black;
+.pdf.button {
+	background-color: #4CAF50;
+	margin: 0 auto;
+	padding: 10px 10px;
+	display: inline-block;
+	width: 75px;
+	text-align: center;
+	color: white;
+	font-size: 15px;
 	cursor: pointer;
 	pointer-events: pointer;
-	font-size: 30px;
+	letter-spacing: 1px;
+	-webkit-transition-duration: .4s;
+		 -moz-transition-duration: .4s;
+			 -o-transition-duration: .4s;
+					transition-duration: .4s;
+	border: 1px solid #4CAF50;
+	outline: none;
+	font-weight: normal;
 }
-.rightArrow {
-	content: "\2192";
+.pdf.button:hover {
 	background-color: white;
-	outline: none;
-	border: 1px solid black;
-	cursor: pointer;
-	pointer-events: pointer;
-	font-size: 30px;
-}*/
+	color: black;
+}
 
 
 
@@ -444,6 +450,23 @@ button {
 	height: 600px;
 	margin: 0 auto;
 	font-size: 30px;
+	color: black;
+}
+/*.pdf.container {
+	background-color: #52ADDA;
+}*/
+.pdf-viewer {
+	color: black;
+}
+
+
+.field-dark {
+	color: black;
+}
+.pdf.page,
+.pdf.page-total {
+	color: black;
+	font-size: 20px;
 }
 
 

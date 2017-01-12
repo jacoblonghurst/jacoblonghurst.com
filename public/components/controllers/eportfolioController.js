@@ -3,42 +3,62 @@ angular.module('JacobLonghurst')
     $scope.activePhysics = false;
     $scope.activeHistory = false;
     $scope.activeEngl = false;
+    $scope.activeCriminal = false;
     $scope.physics1010 = false;
     $scope.history1700 = false;
+    $scope.english1010 = false;
+    $scope.criminal = false;
 
+    // HANDLING FOR PHYSICS
+    $scope.physToggle = function() {
+      if ($scope.activePhysics === false) {
+        $scope.activePhysics = true;
+        $scope.activeHistory = false;
+        $scope.activeEngl = false;
+        $scope.activeCriminal = false;
+      } else if ($scope.activePhysics === true) {
+        $scope.activePhysics = false;
+      }
+    }
+
+    // HANDLING FOR HISTORY
+    $scope.histToggle = function() {
+      if ($scope.activeHistory === false) {
+        $scope.activeHistory = true;
+        $scope.activePhysics = false;
+        $scope.activeEngl = false;
+        $scope.activeCriminal = false;
+      } else if ($scope.activeHistory === true) {
+        $scope.activeHistory = false;
+      }
+    }
+
+    // HANDLING FOR ENGLISH
+    $scope.englToggle = function() {
+      if ($scope.activeEngl === false) {
+        $scope.activeEngl = true;
+        $scope.activePhysics = false;
+        $scope.activeHistory = false;
+        $scope.activeCriminal = false;
+      } else if ($scope.activeEngl === true) {
+        $scope.activeEngl = false;
+      }
+    }
+
+    // HANDLING FOR CRIMINAL JUSTICE
+    $scope.criminalToggle = function() {
+      if ($scope.activeCriminal === false) {
+        $scope.activeCriminal = true;
+        $scope.activePhysics = false;
+        $scope.activeHistory = false;
+        $scope.activeEngl = false;
+      } else if ($scope.activeCriminal === true) {
+        $scope.activeCriminal = false;
+      }
+    }
     $scope.phys1010file = "assets/files/phys1010paper.pdf";
+    $scope.hist1700file = "assets/files/hist1700.pdf";
+    $scope.engl1010file = "assets/files/engl1010.pdf";
+    $scope.crimefile = "assets/files/cj1010.pdf";
 
   }]);
-
-    // $scope.totalPages = 4;
-    // $scope.currentPage = 1;
-    // $scope.nextPage = function() {
-    //   $scope.viewer.nextPage();
-    // };
-    //
-    // $scope.prevPage = function() {
-    //   $scope.viewer.prevPage();
-    // };
-    //
-    // $scope.pageLoaded = function(curPage, totalPages) {
-    //   $scope.currentPage = curPage;
-    //   $scope.totalPages = totalPages;
-    // };
-
-  // .controller('histController', [ '$scope', function($scope) {
-  //   $scope.viewer = pdf.Instance("hist1700Viewer");
-  //   // $scope.totalPages = 4;
-  //   // $scope.currentPage = 1;
-  //   $scope.nextPage = function() {
-  //     $scope.viewer.nextPage();
-  //   };
-  //
-  //   $scope.prevPage = function() {
-  //     $scope.viewer.prevPage();
-  //   };
-  //
-  //   $scope.pageLoaded = function(curPage, totalPages) {
-  //     $scope.currentPage = curPage;
-  //     $scope.totalPages = totalPages;
-  //   };
-  // }]);

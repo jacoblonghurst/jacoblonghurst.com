@@ -11,21 +11,27 @@
 
         <div class="row">
           <div class="span12 center">
-            <div class="span4">
+            <div class="span3">
               <div>
-                <button class="button alt blue center" ng-click="activePhysics = !activePhysics">Physics</button>
+                <button class="button alt blue center" ng-click="physToggle()">Physics</button>
               </div>
             </div>
 
-            <div class="span4">
+            <div class="span3">
               <div>
-                <button class="button alt blue" ng-click="activeHistory = !activeHistory">History</button>
+                <button class="button alt blue" ng-click="histToggle()">History</button>
               </div>
             </div>
 
-            <div class="span4">
+            <div class="span3">
               <div>
-                <button class="button alt blue" ng-click="activeEngl = !activeEngl">English</button>
+                <button class="button alt blue" ng-click="englToggle()">English</button>
+              </div>
+            </div>
+
+            <div class="span3">
+              <div>
+                <button class="button alt blue" ng-click="criminalToggle()">Criminal Justice</button>
               </div>
             </div>
           </div>
@@ -41,7 +47,9 @@
                 <div class="pdf-div">
                   <br />
                   <a href="../../../assets/files/phys1010paper.pdf" class="button alt green" style="margin-bottom: 50px;">Download</a><br />
-                  <pdf-viewer delegate-handle="my-pdf-container" url="phys1010file" scale="2" show-toolbar="true"></pdf-viewer>
+                  <div class="pdf container">
+                    <pdf-viewer delegate-handle="my-phys1010pdf-container" url="phys1010file" scale="1.75" show-toolbar="true"></pdf-viewer>
+                  </div>
                 </div>
               </div>
             </div>
@@ -56,9 +64,43 @@
               <button class="button alt blue center" ng-click="history1700 = !history1700">History 1700</button>
               <div ng-show="history1700"><br />
                 <div class="pdf-div">
+                  <a href="../../../assets/files/hist1700.pdf" class="button alt green">Download</a><br />
+                  <br />
+                  <pdf-viewer delegate-handle="my-hist1700pdf-container" url="hist1700file" scale="1.75" show-toolbar="true"></pdf-viewer>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ENGLISH SECTION -->
+        <div class="row">
+          <div class="span12 center">
+            <br />
+            <div ng-show="activeEngl">
+              <button class="button alt blue center" ng-click="english1010 = !english1010">English 1010</button>
+              <div ng-show="english1010"><br />
+                <div class="pdf-div">
+                  <a href="../../../assets/files/engl1010.pdf" class="button alt green">Download</a><br />
+                  <br />
+                  <pdf-viewer delegate-handle="my-engl1010pdf-container" url="engl1010file" scale="1.75" show-toolbar="true"></pdf-viewer>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CRIMINAL JUSTICE SECTION -->
+        <div class="row">
+          <div class="span12 center">
+            <br />
+            <div ng-show="activeCriminal">
+              <button class="button alt blue center" ng-click="criminal = !criminal">English 1010</button>
+              <div ng-show="criminal"><br />
+                <div class="pdf-div">
                   <a href="../../../assets/files/phys1010paper.pdf" class="button alt green">Download</a><br />
                   <br />
-                  <pdf-viewer></pdf-viewer>
+                  <pdf-viewer delegate-handle="my-crimepdf-container" url="engl1010file" scale="1.75" show-toolbar="true"></pdf-viewer>
                 </div>
               </div>
             </div>

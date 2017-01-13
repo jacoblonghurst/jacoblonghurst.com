@@ -342,7 +342,8 @@ button {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: auto;
-	min-height: 600px;
+	background-attachment: fixed;
+	min-height: 750px;
 }
 /*
 ================================================
@@ -477,20 +478,21 @@ button {
 /*.pdf.container {
 	background-color: #52ADDA;
 }*/
-.pdf-viewer {
-	color: black;
-}
 
-
-.field-dark {
-	color: black;
-}
 .pdf.page,
 .pdf.page-total {
 	color: black;
 	font-size: 20px;
 }
 
+.pdf.opacity {
+	opacity: .9;
+}
+
+/*.pdf.number {
+	background-color: #63b5dd;
+	color: #63b5dd;
+}*/
 
 /*
 ========================================================================

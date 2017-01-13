@@ -5,9 +5,11 @@ angular.module('JacobLonghurst')
     $scope.activeEngl = false;
     $scope.activeCriminal = false;
     $scope.physics1010 = false;
+    $scope.phys1010refl = false;
     $scope.history1700 = false;
     $scope.english1010 = false;
-    $scope.criminal = false;
+    $scope.crimePaperImmigration = false;
+    $scope.crimePaperGuns = false;
 
     // HANDLING FOR PHYSICS
     $scope.physToggle = function() {
@@ -19,7 +21,7 @@ angular.module('JacobLonghurst')
       } else if ($scope.activePhysics === true) {
         $scope.activePhysics = false;
       }
-    }
+    };
 
     // HANDLING FOR HISTORY
     $scope.histToggle = function() {
@@ -31,7 +33,7 @@ angular.module('JacobLonghurst')
       } else if ($scope.activeHistory === true) {
         $scope.activeHistory = false;
       }
-    }
+    };
 
     // HANDLING FOR ENGLISH
     $scope.englToggle = function() {
@@ -43,7 +45,7 @@ angular.module('JacobLonghurst')
       } else if ($scope.activeEngl === true) {
         $scope.activeEngl = false;
       }
-    }
+    };
 
     // HANDLING FOR CRIMINAL JUSTICE
     $scope.criminalToggle = function() {
@@ -55,10 +57,16 @@ angular.module('JacobLonghurst')
       } else if ($scope.activeCriminal === true) {
         $scope.activeCriminal = false;
       }
-    }
+    };
+    //
+    //            ALL THE PAPER FILES
+    //
     $scope.phys1010file = "assets/files/phys1010paper.pdf";
+    $scope.phys1010reflection = "assets/files/phys1010reflection.pdf";
     $scope.hist1700file = "assets/files/hist1700.pdf";
     $scope.engl1010file = "assets/files/engl1010.pdf";
-    $scope.crimefile = "assets/files/cj1010.pdf";
+    $scope.crimePaper1 = "assets/files/cjpaper1.pdf";
+    $scope.crimePaper2 = "assets/files/cjpaper2.pdf";
+
 
   }]);

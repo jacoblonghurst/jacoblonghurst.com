@@ -9,5 +9,12 @@ angular.module('JacobLonghurst', ['ngRoute', 'pdf'])
       })
       .when('/eportfolio', {
         templateUrl: "../views/templates/eportfolio/index.html"
+      })
+      .when('/portfolio', {
+        templateUrl: "../views/templates/portfolio/index.html"
+      })
+      .when('/about', {
+        templateUrl: "../views/templates/about/index.html"
       });
+    
   }]);

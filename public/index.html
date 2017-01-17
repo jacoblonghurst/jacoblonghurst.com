@@ -19,7 +19,11 @@
 
 </head>
 
-<body id="body" ng-view>
+<body id="body" ng-controller="DefaultController">
+  <div id="loader">
+    <div class="animate-bottom" id="mainDiv" ng-view>
+    </div>
+  </div>
 
 </body>
 
@@ -45,6 +49,7 @@
 <script src="components/directives/navigation.js"></script>
 <script src="components/directives/templateSection.js"></script>
 <script serc="components/directives/pdfToolbar.js"></script>
+
 <!-- Controllers -->
 <script src="components/controllers/eportfolioController.js"></script>
 

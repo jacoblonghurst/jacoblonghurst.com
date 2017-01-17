@@ -1,4 +1,4 @@
-angular.module('JacobLonghurst', ['ngRoute', 'pdf'])
+angular.module('JacobLonghurst', ['ngRoute', 'pdf', 'ngAnimate'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
@@ -15,6 +15,9 @@ angular.module('JacobLonghurst', ['ngRoute', 'pdf'])
       })
       .when('/about', {
         templateUrl: "../views/templates/about/index.html"
+      })
+      .when('/contact', {
+        templateUrl: "../views/templates/contact/index.html"
       });
-    
+
   }]);

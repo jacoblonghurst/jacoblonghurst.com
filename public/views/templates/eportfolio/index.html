@@ -41,49 +41,49 @@
         <div class="row pdf div">
           <div class="span12 center">
             <!-- PHYSICS SECTION -->
-            <div ng-show="activePhysics" class="pdf opacity">
+            <div ng-show="activePhysics" class="pdf opacity pdf-show-hide">
 
               <button class="button alt blue center" ng-click="physics1010 = !physics1010">Physics 1010</button>
-              <div ng-show="physics1010">
+              <div ng-show="physics1010" class="pdf-show-hide">
                 <a href="../../../assets/files/phys1010paper.pdf" class="button alt green" style="margin-bottom: 50px; margin-top: 25px;">Download</a>
                 <pdf-viewer delegate-handle="my-phys1010pdf-container" url="phys1010file" scale="1.75" show-toolbar="true"></pdf-viewer>
               </div>
 
               <button class="button alt blue center" ng-click="phys1010refl = !phys1010refl">Reflection</button>
-              <div ng-show="phys1010refl">
+              <div ng-show="phys1010refl" class="pdf-show-hide">
                 <a href="../../../assets/files/phys1010reflection.pdf" class="button alt green" style="margin-bottom: 50px; margin-top: 25px;">Download</a>
                 <pdf-viewer delegate-handle="my-phys1010reflpdf-container" url="phys1010reflection" scale="1.75" show-toolbar="true"></pdf-viewer>
               </div>
             </div>
 
             <!-- HISTORY SECTION -->
-            <div ng-show="activeHistory" class="pdf opacity">
+            <div ng-show="activeHistory" class="pdf opacity pdf-show-hide">
               <button class="button alt blue center" ng-click="history1700 = !history1700">History 1700</button>
-              <div ng-show="history1700"><br />
+              <div ng-show="history1700"  class="pdf-show-hide"><br />
                 <a href="../../../assets/files/hist1700.pdf" class="button alt green" style="margin-bottom: 50px;">Download</a>
                 <pdf-viewer delegate-handle="my-hist1700pdf-container" url="hist1700file" scale="1.75" show-toolbar="true"></pdf-viewer>
               </div>
             </div>
 
             <!-- ENGLISH SECTION -->
-            <div ng-show="activeEngl" class="pdf opacity">
+            <div ng-show="activeEngl" class="pdf opacity pdf-show-hide">
               <button class="button alt blue center" ng-click="english1010 = !english1010">English 1010</button>
-              <div ng-show="english1010"><br />
+              <div ng-show="english1010" class="pdf-show-hide"><br />
                 <a href="../../../assets/files/engl1010.pdf" class="button alt green" style="margin-bottom: 50px;">Download</a>
                 <pdf-viewer delegate-handle="my-engl1010pdf-container" url="engl1010file" scale="1.75" show-toolbar="true"></pdf-viewer>
               </div>
             </div>
 
             <!-- CRIMINAL JUSTICE SECTION -->
-            <div ng-show="activeCriminal" class="pdf opacity">
+            <div ng-show="activeCriminal" class="pdf opacity pdf-show-hide">
               <button class="button alt blue center" ng-click="crimePaperImmigration = !crimePaperImmigration" style="margin-bottom: 20px;">Illegal Immigration</button>
-              <div ng-show="crimePaperImmigration">
+              <div ng-show="crimePaperImmigration" class="pdf-show-hide">
                 <a href="../../../assets/files/cjpaper1.pdf" class="button alt green" style="margin-bottom: 50px;">Download</a>
                 <pdf-viewer delegate-handle="my-crimeImmigration-container" url="crimePaper1" scale="1.75" show-toolbar="true"></pdf-viewer>
               </div>
 
               <button class="button alt blue center" ng-click="crimePaperGuns = !crimePaperGuns" style="margin-bottom: 20px;">Gun Control</button>
-              <div ng-show="crimePaperGuns">
+              <div ng-show="crimePaperGuns" class="pdf-show-hide">
                 <a href="../../../assets/files/cjpaper2.pdf" class="button alt green" style="margin-bottom: 50px;">Download</a>
                 <pdf-viewer delegate-handle="my-crimeGuns-container" url="crimePaper2" scale="1.75" show-toolbar="true"></pdf-viewer>
               </div>

@@ -19,15 +19,16 @@
 
 </head>
 
-<body id="body" ng-controller="DefaultController">
-  <div id="loader">
-    <div class="animate-bottom" id="mainDiv" ng-view>
+<body id="body">
+    <div id="loader" style="display: block;"></div>
+    <div ng-view>
+        <div class="animate-load" id="mainDiv" style="display: none;"></div>
     </div>
-  </div>
 
 </body>
 
 <!-- SCRIPT FILES AND CDN'S -->
+
 <!-- <script src="assets/js/jQuery.js"></script>
 <script src="assets/js/script.js"></script> -->
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
@@ -36,6 +37,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-resource.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
+
 <script src="components/app.js"></script>
 
 <!-- PDF Viewer Directive -->

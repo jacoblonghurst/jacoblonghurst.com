@@ -14,6 +14,7 @@ body {
 #wrapper {
 	min-height: 100%;
 	position: relative;
+	margin: 0;
 }
 #content {
 	padding-bottom: 100px; /* Height of the footer element */
@@ -291,6 +292,7 @@ input[type=textarea]:focus {
 
 a {
 	text-decoration: none;
+	color: black;
 }
 button {
 	text-decoration: none;
@@ -463,8 +465,13 @@ button {
 	margin: 0 auto;
 	padding: 0;
 }
-.mb50 {
-	margin-bottom: 50px;
+
+.hr-main {
+	width: 100%;
+	box-shadow: 0 .1em .1em 0 black;
+	border: .1em solid black;
+	margin: 0 0 100px 0;
+
 }
 
 /*
@@ -553,6 +560,32 @@ button {
 }
 .pdf-show-hide.ng-hide {
 	opacity: 0;
+}
+
+
+
+
+
+/*
+==================================================
+									About Page
+==================================================
+*/
+
+.about.title {
+	font-size: 17px;
+	font-weight: lighter;
+	letter-spacing: .5em;
+	text-transform: uppercase;
+	/*color: #3c3535;*/
+	color: #473c3c;
+}
+.about.header {
+	font-size: 30px;
+	font-weight: 100;
+	letter-spacing: .5em;
+	text-transform: uppercase;
+	color: #473c3c;
 }
 
 /*

@@ -21,6 +21,50 @@ angular.module('JacobLonghurst')
 
         $scope.calculateSame = function(matrix) {
 
+            switch (matrix.type) {
+                case 'add':
+                    switch (matrix.size) {
+                        case '2':
+                            break;
+                        case '3':
+                            // $scope.sameRes3x3 = [
+                            //     { id: '1-1', data: _1_1 },
+                            //     { id: '1-2', data: _1_2 },
+                            //     { id: '1-3', data: _1_3 },
+                            //     { id: '2-1', data: _2_1 },
+                            //     { id: '2-2', data: _2_2 },
+                            //     { id: '2-3', data: _2_3 },
+                            //     { id: '3-1', data: _3_1 },
+                            //     { id: '3-2', data: _3_2 },
+                            //     { id: '3-3', data: _3_3 }
+                            // ];
+
+                            var _1_1 = parseFloat(matrix._3_1_1_1) + parseFloat(matrix._3_2_1_1);
+                            var _1_2 = parseFloat(matrix._3_1_1_2) + parseFloat(matrix._3_2_1_2);
+                            var _1_3 = parseFloat(matrix._3_1_1_3) + parseFloat(matrix._3_2_1_3);
+                            var _2_1 = parseFloat(matrix._3_1_2_1) + parseFloat(matrix._3_2_2_1);
+                            var _2_2 = parseFloat(matrix._3_1_2_2) + parseFloat(matrix._3_2_2_2);
+                            var _2_3 = parseFloat(matrix._3_1_2_3) + parseFloat(matrix._3_2_2_3);
+                            var _3_1 = parseFloat(matrix._3_1_3_1) + parseFloat(matrix._3_2_3_1);
+                            var _3_2 = parseFloat(matrix._3_1_3_2) + parseFloat(matrix._3_2_3_2);
+                            var _3_3 = parseFloat(matrix._3_1_3_3) + parseFloat(matrix._3_2_3_3);
+
+                            $scope.sameRes3x3 = {
+                                '1x1': _1_1,
+                                '1x2': _1_2,
+                                '1x3': _1_3,
+                                '2x1': _2_1,
+                                '2x2': _2_2,
+                                '2x3': _2_3,
+                                '3x1': _3_1,
+                                '3x2': _3_2,
+                                '3x3': _3_3
+                            };
+                            console.log(_1_1);
+                            break;
+                    }
+                break;
+            }
         }
 
         // $scope.keyBuffer = [];

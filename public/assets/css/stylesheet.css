@@ -398,7 +398,42 @@ button {
 ==================================================
 */
 
+.matrix-solution-box-outer {
+	width: 300px;
+    height: 300px;
+    background-color: #3B5998;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.matrix-solution-box-inner {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    background-color: ghostwhite;
+    top: 50%;
+    margin-top: -125px;
+    left: 50%;
+    margin-left: -125px;
+}
 
+.matrix-label {
+    color: black;
+    font-weight: 200;
+    text-align: center;
+    width: 50px;
+}
+.matrix-input {
+    font-weight: 200;
+    font-size: 1em;
+    letter-spacing: .1em;
+    width: 50px;
+    margin-bottom: 0;
+    text-align: center;
+}
 
 /*
 ========================================================================

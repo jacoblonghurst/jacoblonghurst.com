@@ -30,7 +30,7 @@ app.all('/*', function(req, res, next) {
 
 //CONNECTIONS//
 //CONNECTIONS//
-var port = 8099;
+var port = 80;
 
 app.listen(port, function(){
     console.log("Jake the Snake", port);

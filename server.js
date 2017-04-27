@@ -21,16 +21,19 @@ app.use(session({
 }));
 
 
+//ROUTES//
+app.all('/*', function(req, res, next) {
+    // Just send the index.html for other files to support HTML5Mode
+    res.sendFile('index.html', { root: __dirname + "/public" });
+});
+
 
 //CONNECTIONS//
-var mongoURI = config.MONGO_URI;
-var port = config.PORT;
+//CONNECTIONS//
+var port = 8099;
 
-mongoose.set("debug", true);
-mongoose.connect(mongoURI);
-mongoose.connection.once("open", function(){
-  console.log("Connected to Mongo DB at ", mongoURI);
-  app.listen(port, function(){
+app.listen(port, function(){
     console.log("Jake the Snake", port);
-  });
 });
+
+module.exports = app;

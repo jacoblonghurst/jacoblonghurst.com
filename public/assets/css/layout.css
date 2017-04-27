@@ -1,0 +1,298 @@
+/*
+=======================================
+          Font Sizing
+=======================================
+*/
+.h20 {
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: .2em;
+}
+.h25 {
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: .2em;
+}
+.h30 {
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: .2em;
+}
+.h35 {
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: .2em;
+}
+.h40 {
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: .2em;
+}
+.h45 {
+    font-size: 45px;
+    text-align: center;
+    letter-spacing: .2em;
+}
+.h50 {
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: .2em;
+}
+.h55 {
+    font-size: 55px;
+    text-align: center;
+    letter-spacing: .2em;
+}
+.h60 {
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: .2em;
+}
+.h66 {
+    font-size: 65px;
+    text-align: center;
+    letter-spacing: .2em;
+}
+/*
+=======================================
+       Margins & Fonts & Padding
+=======================================
+*/
+
+/*--        MARGIN BOTTOM       --*/
+.mb10 {
+    margin-bottom: 10px;
+}
+.mb20 {
+    margin-bottom: 20px;
+}
+.mb30 {
+    margin-bottom: 30px;
+}
+.mb40 {
+    margin-bottom: 40px;
+}
+.mb50 {
+    margin-bottom: 50px;
+}
+.mb75 {
+    margin-bottom: 75px;
+}
+.mb100 {
+    margin-bottom: 100px;
+}
+.mb125 {
+    margin-bottom: 125px;
+}
+.mb150 {
+    margin-bottom: 150px;
+}
+.mb175 {
+    margin-bottom: 175px;
+}
+.mb200 {
+    margin-bottom: 200px;
+}
+
+.mbn15 {
+    margin-bottom: -15px;
+}
+.mbn25 {
+    margin-bottom: -25px;
+}
+.mbn35 {
+    margin-bottom: -35px;
+}
+.mbn50 {
+    margin-bottom: -50px;
+}
+
+/*--        MARGIN RIGHT       --*/
+
+.mr10 {
+    margin-right: 10px;
+}
+.mr20 {
+    margin-right: 20px;
+}
+.mr30 {
+    margin-right: 30px;
+}
+.mr35 {
+    margin-right: 35px;
+}
+.mr40 {
+    margin-right: 40px;
+}
+.mr60 {
+    margin-right: 60px;
+}
+.mr80 {
+    margin-right: 80px;
+}
+.mr100 {
+    margin-right: 80px;
+}
+
+/*--        MARGIN LEFT       --*/
+
+.ml20 {
+    margin-left: 20px;
+}
+.ml35 {
+    margin-left: 35px;
+}
+.ml40 {
+    margin-left: 40px;
+}
+.ml50 {
+    margin-left: 50px;
+}
+.ml60 {
+    margin-left: 60px;
+}
+.ml70 {
+    margin-left: 70px;
+}
+.ml80 {
+    margin-left: 80px;
+}
+.ml90 {
+    margin-left: 90px;
+}
+.ml100 {
+    margin-left: 100px;
+}
+.ml120 {
+    margin-left: 120px;
+}
+.ml130 {
+    margin-left: 130px;
+}
+.ml140 {
+    margin-left: 140px;
+}
+
+/*--        MARGIN TOP       --*/
+
+.mt10 {
+    margin-top: 10px;
+}
+.mt20 {
+    margin-top: 20px;
+}
+.mt25 {
+    margin-top: 25px;
+}
+.mt30 {
+    margin-top: 30px;
+}
+.mt40 {
+    margin-top: 40px;
+}
+.mt50 {
+    margin-top: 50px;
+}
+.mt75 {
+    margin-top: 75px;
+}
+.mt100 {
+    margin-top: 100px;
+}
+.mt125 {
+    margin-top: 125px;
+}
+.mt150 {
+    margin-top: 150px;
+}
+.mt175 {
+    margin-top: 175px;
+}
+.mt200 {
+    margin-top: 200px;
+}
+.mt250 {
+    margin-top: 250px;
+}
+.mt300 {
+    margin-top: 300px;
+}
+
+/*--        WIDTH       --*/
+
+.w40 {
+    width: 40px;
+}
+.w60 {
+    width: 60px;
+}
+.w80 {
+    width: 80px;
+}
+.w100 {
+    width: 100px;
+}
+.w150 {
+    width: 150px;
+}
+.w175 {
+    width: 175px;
+}
+.w200 {
+    width: 200px;
+}
+.w225 {
+    width: 225px;
+}
+.w300 {
+    width: 300px;
+}
+
+/*--        FONTS      --*/
+
+.label-font {
+    font-size: 1em;
+}
+.input-font {
+    font-size: 1em;
+}
+.fs-lg {
+    font-size: 4em;
+}
+
+/*
+=======================================
+              POSITIONING
+=======================================
+*/
+.center-inline {
+    text-align: center;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.center {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.left-align {
+    text-align: left;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.left-align-table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    display: block;
+}
+textarea {
+    letter-spacing: .1em;
+}
+.form-success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}

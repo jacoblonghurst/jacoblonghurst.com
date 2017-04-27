@@ -1,38 +1,12 @@
-html {
-	width: auto;
-	height: 100%;
-}
+
 body {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-	Helvetica, "Open Sans Condensed", sans-serif;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Open Sans Condensed", sans-serif;
 	margin: 0;
 	padding: 0;
 	bottom: 0;
 	overflow-x: hidden;
-	height: 100%;
-}
-#wrapper {
-	min-height: 100%;
-	position: relative;
-	margin: 0;
-}
-#content {
-	padding-bottom: 100px; /* Height of the footer element */
-}
-#footer {
-	background-image: url('../images/footer.png');
-	background-repeat: repeat;
-	background-attachment: scroll;
-	width: 100%;
-	margin-top: 50px;
-	height: 50px;
-	bottom: 0;
-	left: 0;
-	padding: 5px;
-	position: absolute;
-}
-.body {
-	overflow-y: hidden;
+	height: 100vh;
+	background-color: white;
 }
 
 /*------------   INPUT BOXES   ----------
@@ -41,7 +15,9 @@ body {
 -----------------------------------------
 */
 
-
+a {
+	text-decoration: none;
+}
 
 
 input[type=text],
@@ -53,7 +29,7 @@ input[type=password] {
 	border: 1px solid #ccc;
 	box-sizing: border-box;
 	font-size: 14px;
-	font-weight: 550;
+	font-weight: 500;
 	width: 180px;
 }
 input[type=number] {
@@ -64,7 +40,7 @@ input[type=number] {
 	border: 1px solid #ccc;
 	box-sizing: border-box;
 	width: 65px;
-	font-weight: 550;
+	font-weight: 500;
 	font-size: 14px;
 }
 input[type=date] {
@@ -75,7 +51,7 @@ input[type=date] {
 	border: 1px solid #ccc;
 	box-sizing: border-box;
 	width: 140px;
-	font-weight: 550;
+	font-weight: 500;
 	font-size: 14px;
 }
 
@@ -100,7 +76,6 @@ input[type=textarea]:focus {
 	color: white;
 	font-size: 15px;
 	cursor: pointer;
-	pointer-events: pointer;
 	letter-spacing: 2px;
 	-webkit-transition-duration: .4s;
 	   -moz-transition-duration: .4s;
@@ -109,6 +84,7 @@ input[type=textarea]:focus {
 	border: 2px solid #4CAF50;
 	outline: none;
 	font-weight: inherit;
+	text-decoration: none;
 }
 .buttonalt {
 	background-color: #5f6568;
@@ -120,7 +96,6 @@ input[type=textarea]:focus {
 	color: white;
 	font-size: 15px;
 	cursor: pointer;
-	pointer-events: pointer;
 	letter-spacing: 2px;
 	-webkit-transition-duration: .4s;
 	   -moz-transition-duration: .4s;
@@ -129,6 +104,7 @@ input[type=textarea]:focus {
 	border: 1px solid #5f6568;
 	outline: none;
 	font-weight: normal;
+	text-decoration: none;
 }
 .buttonalt.pane {
 	background-color: #4CAF50;
@@ -140,7 +116,6 @@ input[type=textarea]:focus {
 	color: white;
 	font-size: 15px;
 	cursor: pointer;
-	pointer-events: pointer;
 	letter-spacing: 2px;
 	-webkit-transition-duration: .4s;
 	   -moz-transition-duration: .4s;
@@ -148,6 +123,7 @@ input[type=textarea]:focus {
 	        transition-duration: .4s;
 	border: 1px solid #4CAF50;
 	outline: none;
+	text-decoration: none;
 }
 .buttonalt.pane:hover {
 	background-color: white;
@@ -170,6 +146,7 @@ input[type=textarea]:focus {
 #btnSearch {
 	margin-left: 150px;
 	margin-right: 30px;
+	text-decoration: none;
 }
 
 .button.alt.blue {
@@ -182,7 +159,6 @@ input[type=textarea]:focus {
 	color: white;
 	font-size: 15px;
 	cursor: pointer;
-	pointer-events: pointer;
 	letter-spacing: 1px;
 	-webkit-transition-duration: .4s;
 	   -moz-transition-duration: .4s;
@@ -191,6 +167,7 @@ input[type=textarea]:focus {
 	border: 1px solid #52ADDA;
 	outline: none;
 	font-weight: normal;
+	text-decoration: none;
 }
 .button.alt.blue:hover {
 	background-color: white;
@@ -210,7 +187,6 @@ input[type=textarea]:focus {
 	color: white;
 	font-size: 17px;
 	cursor: pointer;
-	pointer-events: pointer;
 	letter-spacing: 3px;
 	-webkit-transition-duration: .4s;
 	   -moz-transition-duration: .4s;
@@ -220,6 +196,7 @@ input[type=textarea]:focus {
 	outline: none;
 	font-weight: normal;
 	line-height: 30px;
+	text-decoration: none;
 }
 .left {
 	border-left: 0;
@@ -240,7 +217,6 @@ input[type=textarea]:focus {
 	color: white;
 	font-size: 15px;
 	cursor: pointer;
-	pointer-events: pointer;
 	letter-spacing: 1px;
 	-webkit-transition-duration: .4s;
 	   -moz-transition-duration: .4s;
@@ -249,37 +225,12 @@ input[type=textarea]:focus {
 	border: 1px solid #4CAF50;
 	outline: none;
 	font-weight: normal;
+	text-decoration: none;
 }
 .button.alt.green:hover {
 	background-color: white;
 	color: black;
 }
-.pdf.button {
-	background-color: #4CAF50;
-	margin: 0 auto;
-	padding: 10px 10px;
-	display: inline-block;
-	width: 75px;
-	text-align: center;
-	color: white;
-	font-size: 15px;
-	cursor: pointer;
-	pointer-events: pointer;
-	letter-spacing: 1px;
-	-webkit-transition-duration: .4s;
-		 -moz-transition-duration: .4s;
-			 -o-transition-duration: .4s;
-					transition-duration: .4s;
-	border: 1px solid #4CAF50;
-	outline: none;
-	font-weight: normal;
-}
-.pdf.button:hover {
-	background-color: white;
-	color: black;
-}
-
-
 
 /* ==============================================
 			FORM HANDLING & VALIDATION
@@ -306,7 +257,7 @@ button {
 */
 
 .parallax.main {
-	background-image: url("../images/main-background.jpg");
+	/*background-image: url("../images/main-background.jpg");*/
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -315,7 +266,7 @@ button {
 	padding: 0;
 }
 .parallax-bg-10 {
-  min-height: 1080px;
+  min-height: 500px;
   background-color: #191919;
 	opacity: 1;
 }
@@ -394,71 +345,10 @@ button {
   to{ bottom:0; opacity:1 }
 }
 */
-#mainDiv {
-  display: none;
-  text-align: center;
-}
 
 /*		END ANIMATION LOADER		*/
 
-/*
-================================================
-			TITLE / HEADINGS / COLORS / TEMPLATES
-================================================
-*/
 
-.header20 {
-	font-size: 20px;
-	text-align: center;
-}
-.header25 {
-	font-size: 25px;
-	text-align: center;
-}
-.header30 {
-	font-size: 30px;
-	text-align: center;
-}
-.header35 {
-	font-size: 35px;
-	text-align: center;
-}
-.header40 {
-	font-size: 40px;
-	text-align: center;
-}
-.header45 {
-	font-size: 45px;
-	text-align: center;
-}
-.header50 {
-	font-size: 50px;
-	text-align: center;
-}
-.header55 {
-	font-size: 55px;
-	text-align: center;
-}
-.header60 {
-	font-size: 60px;
-	text-align: center;
-}
-.header65 {
-	font-size: 65px;
-	text-align: center;
-}
-.white {
-	color: white;
-}
-.blue {
-	color: blue;
-}
-.black {
-	color: black;
-}
-.center {
-    text-align: center;
-}
 .center.div {
 	text-align: center;
 	display: block;
@@ -466,13 +356,7 @@ button {
 	padding: 0;
 }
 
-.hr-main {
-	width: 100%;
-	box-shadow: 0 .1em .1em 0 black;
-	border: .1em solid black;
-	margin: 0 0 100px 0;
 
-}
 
 /*
 ==================================================
@@ -483,86 +367,6 @@ button {
 #home {
 	overflow-y: hidden;
 }
-
-.login.section {
-	overflow-y: hidden;
-}
-.login.field:focus {
-	box-shadow: 0 0 6px black, 0 0 15px rgba(102, 175, 233, .6);
-	outline: none;
-}
-.login.field {
-	margin-left: 20px;
-	margin-right: 20px;
-}
-.login-form {
-	display: block;
-	text-align: center;
-}
-
-.login.label {
-	float: left
-}
-
-
-/*
-==================================================
-									ePortfolio Page
-==================================================
-*/
-
-.pdf.div {
-	margin: 0 auto;
-	margin-top: 25px;
-	padding: 0;
-}
-.pdf.div.phys {
-	margin: 0 auto;
-	margin-top: 25px;
-	padding: 0;
-}
-.pdf.div.hist {
-	margin: 0 auto;
-	margin-top: 24px;
-	padding: 0;
-}
-.pdf.div.engl {
-	margin: 0 auto;
-	margin-top: 23px;
-	padding: 0;
-}
-.pdf.div.cj {
-	margin: 0 auto;
-	margin-top: 22px;
-	padding: 0;
-}
-/*.pdf.container {
-	background-color: #52ADDA;
-}*/
-
-.pdf.page,
-.pdf.page-total {
-	color: black;
-	font-size: 20px;
-}
-
-.pdf.opacity {
-	opacity: .9;
-}
-
-/*.pdf.number {
-	background-color: #63b5dd;
-	color: #63b5dd;
-}*/
-
-.pdf-show-hide {
-	transition: all linear .4s;
-}
-.pdf-show-hide.ng-hide {
-	opacity: 0;
-}
-
-
 
 
 
@@ -589,26 +393,19 @@ button {
 }
 
 /*
+==================================================
+					Matrix Styling
+==================================================
+*/
+
+
+
+/*
 ========================================================================
 						General Formatting
 ======================================================================== */
 
-/*
-===================================================
 
-=FOOTER
-
-===================================================*/
-
-.footer a {
-	color: black;
-}
-
-
-.footer p {
-	color: white;
-	text-align: center;
-}
 
 /*
 ===================================================================================================
@@ -700,110 +497,31 @@ and (-webkit-min-device-pixel-ratio: 1)  {
 
 }
 
-/*  ==========================     DROP DOWN    ==================
-
-=================================================================
-*/
-
-li.dropdown {
-    display: block;
-}
-
-div.drop-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 999;
-}
-div.drop-content a {
-    color: #000;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    background-color: #C9C9C9;
-    margin: 0;
-}
-
-div.drop-content a:hover:not(.active) {
-	background-color: #f1f1f1;
-}
-
-.dropdown:hover div.drop-content {
-    display: block;
-}
-.divider {
-	height: .01em;
-	width: auto;
-	padding: 0;
-	margin: 0 auto;
-	background-color: #4CAF50;
-	border: 1px solid #4CAF50;
-}
-.nav .edge ul {
-	right: 0;
-}
-.show {display:block;}
-
 /*
-==============================================================================================================
-											Horizontal List
-											Vertical List
-=================================================================================================
+=============================================================
+						Document Styling
+=============================================================
 */
 
-ul.horizontal-list {
-	list-style-type: none;
-    margin: 0 auto;
-    padding: 0;
-    overflow: hidden;
-    width: 750px;
-}
-li.horizontal-list {
-	float: left;
-}
-li a.horizontal-list {
-	display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 14px;
-    text-decoration: none;
-    background-color: #C9C9C9;
-    color: #000;
-    border-radius: 4px;
-    width: 220px;
-    height: 50px;
-}
-li a.horizontal-list:hover {
-	background-color: #52ADDA;
-    color: white;
-}
+.menuBardemoBasicUsage .page-container {
+	padding: 32px; }
+
+.menuBardemoBasicUsage .page {
+	margin: 0 auto;
+	padding: 24px;
+	max-width: 680px;
+	box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.25); }
+
+.menuBardemoBasicUsage .page h1 {
+	text-align: center;
+	font-size: 1.8rem;
+	margin-top: 0;
+	font-weight: normal; }
+
+.menuBardemoBasicUsage .page p {
+	line-height: 1.6rem; }
 
 
-/*  -------- VERTICAL LIST -------- */
 
 
-ol.vertical-list,
-ul.vertical-list {
-    list-style-type: none;
-    margin: 0 150px 0 150px;
-    padding: 0;
-    overflow: hidden;
-    text-align: center;
-    width: 750px;
-}
-li a.vertical-list {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
-    background-color: #C9C9C9;
-    border-radius: 4px;
-    width: 200px;
-}
-li a.vertical-list:hover {
-    background-color: #52ADDA;
-    color: white;
-}
+

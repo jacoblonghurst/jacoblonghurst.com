@@ -1,63 +1,74 @@
 <!DOCTYPE html>
 <html ng-app="JacobLonghurst">
-<head>
-<title>Jacob Longhurst</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+    <title>Jacob Longhurst</title>
+        <base href="/" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS AND FONT LINKS -->
-    <link href="assets/css/stylesheet.css" rel="stylesheet" type="text/css" />
-    <link href="assets/images/favicon.png" rel="shortcut icon">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,100i,300,300i,400,400i,600,600i,700,700i|Open+Sans+Condensed:300,300i,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet" />
-    <link href="assets/css/grid.css" type="text/css" rel="stylesheet"  />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+        <!-- CSS AND FONT LINKS -->
+        <link href="assets/css/stylesheet.css" rel="stylesheet" type="text/css" />
+        <link href="assets/images/favicon.png" rel="shortcut icon">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,100i,300,300i,400,400i,600,600i,700,700i|Open+Sans+Condensed:300,300i,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet" />
+        <link href="assets/css/grid.css" type="text/css" rel="stylesheet"  />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.3/angular-material.min.css" rel="stylesheet" />
+        <link href="assets/css/grid.css" rel="stylesheet" />
+        <link href="assets/css/layout.css" rel="stylesheet" />
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="assets/js/vendor/angular-ui-bootstrap/dist/ui-bootstrap-csp.css" rel="stylesheet" />
+        <link href="assets/js/vendor/angular-ui-carousel/dist/ui-carousel.min.css" rel="stylesheet" />
+        <link href="assets/js/vendor/pdfjs/web/viewer.css"
+        <!-- /// FontAwesome Icons 4.3.0 ////////  -->
+        <script src="https://use.fontawesome.com/c1e1a05455.js"></script>
+    </head>
 
-    <!-- /// FontAwesome Icons 4.3.0 ////////  -->
-    <script src="https://use.fontawesome.com/c1e1a05455.js"></script>
-    <!-- <link rel="stylesheet" href="assets/fonts/fontawesome/font-awesome.min.css"> -->
-    <!-- /// Custom Icon Font ////////  -->
-    <!-- <link rel="stylesheet" href="assets/fonts/iconfontcustom/icon-font-custom.css"> -->
+    <body>
 
-</head>
+    <div ui-view></div>
 
-<body id="body">
-    <!-- <route-load-spin /> -->
-    <div ng-if="!isRouteLoading" ng-view></div>
-    <!-- <div id="loader" style="display: block;"></div>
-    <div ng-view>
-        <div class="animate-load" id="mainDiv" style="display: none;"></div>
-    </div> -->
+    </body>
 
-</body>
+    <!--//		ANGULAR MODULES 		//-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-resource.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.3/angular-material.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-aria.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-messages.min.js"></script>
+    <script src="assets/js/vendor/angular-ui-carousel/dist/ui-carousel.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-message-format.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
+    <script src="components/jakeApp.js"></script>
 
-<!-- SCRIPT FILES AND CDN'S -->
+    <!--//		DIRECTIVES 				//-->
+    <script src="components/directives/navigation.js"></script>
+    <script src="components/directives/spinner.js"></script>
 
-<!-- <script src="assets/js/jQuery.js"></script>
-<script src="assets/js/script.js"></script> -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
-
-<!-- Angular App -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-resource.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
-
-<script src="components/app.js"></script>
-
-<!-- PDF Viewer Directive -->
-<script src="assets/js/vendor/pdfviewer/dist/pdf.js"></script>
-<script src="assets/js/vendor/pdfviewer/dist/pdf.compat.js"></script>
-<script src="assets/js/vendor/pdfviewer/dist/pdf.worker.js"></script>
-<script src="assets/js/vendor/pdfviewer/dist/angular-pdf-viewer.min.js"></script>
+    <!--//		CONTROLLERS 			//-->
+    <script src="components/controllers/eportfolioController.js"></script>
+    <script src="components/controllers/MortgageCalcController.js"></script>
+    <script src="components/controllers/AutoLoanController.js"></script>
+    <script src="components/controllers/InstagramController.js"></script>
+    <script src="components/controllers/PhysicsController.js"></script>
+    <script src="components/controllers/MatrixSolutionController.js"></script>
 
 
-<!-- Directives -->
-<script src="components/directives/navigation.js"></script>
-<script src="components/directives/templateSection.js"></script>
-<script src="components/directives/pdfToolbar.js"></script>
-<script src="components/directives/spinner.js"></script>
-<!-- Controllers -->
-<script src="components/controllers/eportfolioController.js"></script>
+    <!--//      SERVICES                //-->
+    <!--<script src="components/services/checklist/AssetEntryFactory.js"></script>-->
+
+    <!--//		VENDORS 				//-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/vendor/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+    <script src="assets/js/vendor/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <!--<script src="assets/js/vendor/pdfjs/web/viewer.js"></script>-->
+    <script src="assets/js/vendor/pdfjs/build/pdf.js"></script>
+    <!--<script src="assets/js/vendor/pdfjs/build/pdf.worker.js"></script>-->
+    <script src="assets/js/vendor/pdfjs/web/l10n.js"></script>
+    <script src="assets/js/vendor/angular-input-masks/releases/angular-input-masks-standalone.min.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </html>

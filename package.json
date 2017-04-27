@@ -1,0 +1,40 @@
+{
+  "name": "jakes_website",
+  "version": "1.0.0",
+  "description": "My personal website for school purposes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacoblonghurst/jacoblonghurst.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacoblonghurst/jacoblonghurst.com/issues"
+  },
+  "homepage": "https://github.com/jacoblonghurst/jacoblonghurst.com#readme",
+  "dependencies": {
+    "angular-animate": "^1.6.1",
+    "angular-input-masks": "^2.5.0",
+    "angular-ui-bootstrap": "^2.5.0",
+    "angular-ui-carousel": "^0.1.7",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "instagram-node": "^0.5.8",
+    "mongodb": "^2.2.19",
+    "mongodb-core": "^2.1.4",
+    "mongoose": "^4.7.6",
+    "pdf": "^0.1.0",
+    "pm2": "^2.4.2",
+    "socket.io": "latest"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-include-source": "^1.1.0"
+  }
+}

@@ -1,0 +1,44 @@
+<section ng-controller="MortgageCalcController as mortcalcCtrl">
+    <div class="center mt25">
+        <p style="font-size: 2em;">Feel free to calculate some mortgages.</p>
+
+        <div flex-gt-sm="125" class="mbn25">
+            <md-input-container class="w175">
+                <label class="label-font">Principal Loan Amount</label>
+                <input md-no-asterisk class="input-font" style="letter-spacing: .1em;" ng-model="mortgage.principal" ui-number-mask />
+            </md-input-container>
+        </div>
+
+        <div flex-gt-sm="125" class="mbn25">
+            <md-input-container class="w175">
+                <label class="label-font">Interest Rate (eg 3.99)</label>
+                <input md-no-asterisk class="input-font" style="letter-spacing: .1em;" ng-model="mortgage.interest" ui-number-mask />
+            </md-input-container>
+        </div>
+
+        <div flex-gt-sm="125" class="mbn25">
+            <md-input-container class="w175">
+                <label class="label-font">Length of Loan in Years</label>
+                <input md-no-asterisk class="input-font" style="letter-spacing: .1em;" ng-model="mortgage.years" ui-number-mask />
+            </md-input-container>
+        </div>
+
+        <div flex-gt-sm="125">
+            <md-input-container class="w175">
+                <label class="label-font">Down Payment</label>
+                <input md-no-asterisk class="input-font" style="letter-spacing: .1em;" ng-model="mortgage.down" ui-number-mask />
+            </md-input-container>
+        </div>
+
+        <div flex-gt-sm="125">
+            <md-button class="md-raised md-primary" ng-click="calculateMonthly(mortgage)">Calculate</md-button>
+            <md-button class="md-raised md-warn" ng-click="reset(mortgage)">Reset</md-button>
+        </div>
+
+        <div class="center mt25 mb50" ng-show="success">
+            <p>Monthly Payment: {{ monthlyPayment | currency: "$": 2 }}</p>
+            <p>Total Interest Paid: {{ totalInterest | currency: "$": 2 }}</p>
+        </div>
+
+    </div>
+</section>

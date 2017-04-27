@@ -1,96 +1,23 @@
 <section id="eportfolio">
-  <div id="wrapper">
-    <div id="content">
-      <navigation></navigation>
-      <div class="container main img" ng-controller="eportfolioController">
-        <div class="row">
-          <div class="span12">
-            <p class="header50">Choose The Field of Study</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="span12 center">
-            <div class="span3">
-              <div>
-                <button class="button alt blue center" ng-click="physToggle()">Physics</button>
-              </div>
-            </div>
-
-            <div class="span3">
-              <div>
-                <button class="button alt blue" ng-click="histToggle()">History</button>
-              </div>
-            </div>
-
-            <div class="span3">
-              <div>
-                <button class="button alt blue" ng-click="englToggle()">English</button>
-              </div>
-            </div>
-
-            <div class="span3">
-              <div>
-                <button class="button alt blue" ng-click="criminalToggle()">Criminal Justice</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="row pdf div">
-          <div class="span12 center">
-            <!-- PHYSICS SECTION -->
-            <div ng-show="activePhysics" class="pdf opacity pdf-show-hide">
-
-              <button class="button alt blue center" ng-click="physics1010 = !physics1010">Physics 1010</button>
-              <div ng-show="physics1010" class="pdf-show-hide">
-                <a href="../../../assets/files/phys1010paper.pdf" class="button alt green" style="margin-bottom: 50px; margin-top: 25px;">Download</a>
-                <pdf-viewer delegate-handle="my-phys1010pdf-container" url="phys1010file" scale="1.75" show-toolbar="true"></pdf-viewer>
-              </div>
-
-              <button class="button alt blue center" ng-click="phys1010refl = !phys1010refl">Reflection</button>
-              <div ng-show="phys1010refl" class="pdf-show-hide">
-                <a href="../../../assets/files/phys1010reflection.pdf" class="button alt green" style="margin-bottom: 50px; margin-top: 25px;">Download</a>
-                <pdf-viewer delegate-handle="my-phys1010reflpdf-container" url="phys1010reflection" scale="1.75" show-toolbar="true"></pdf-viewer>
-              </div>
-            </div>
-
-            <!-- HISTORY SECTION -->
-            <div ng-show="activeHistory" class="pdf opacity pdf-show-hide">
-              <button class="button alt blue center" ng-click="history1700 = !history1700">History 1700</button>
-              <div ng-show="history1700"  class="pdf-show-hide"><br />
-                <a href="../../../assets/files/hist1700.pdf" class="button alt green" style="margin-bottom: 50px;">Download</a>
-                <pdf-viewer delegate-handle="my-hist1700pdf-container" url="hist1700file" scale="1.75" show-toolbar="true"></pdf-viewer>
-              </div>
-            </div>
-
-            <!-- ENGLISH SECTION -->
-            <div ng-show="activeEngl" class="pdf opacity pdf-show-hide">
-              <button class="button alt blue center" ng-click="english1010 = !english1010">English 1010</button>
-              <div ng-show="english1010" class="pdf-show-hide"><br />
-                <a href="../../../assets/files/engl1010.pdf" class="button alt green" style="margin-bottom: 50px;">Download</a>
-                <pdf-viewer delegate-handle="my-engl1010pdf-container" url="engl1010file" scale="1.75" show-toolbar="true"></pdf-viewer>
-              </div>
-            </div>
-
-            <!-- CRIMINAL JUSTICE SECTION -->
-            <div ng-show="activeCriminal" class="pdf opacity pdf-show-hide">
-              <button class="button alt blue center" ng-click="crimePaperImmigration = !crimePaperImmigration" style="margin-bottom: 20px;">Illegal Immigration</button>
-              <div ng-show="crimePaperImmigration" class="pdf-show-hide">
-                <a href="../../../assets/files/cjpaper1.pdf" class="button alt green" style="margin-bottom: 50px;">Download</a>
-                <pdf-viewer delegate-handle="my-crimeImmigration-container" url="crimePaper1" scale="1.75" show-toolbar="true"></pdf-viewer>
-              </div>
-
-              <button class="button alt blue center" ng-click="crimePaperGuns = !crimePaperGuns" style="margin-bottom: 20px;">Gun Control</button>
-              <div ng-show="crimePaperGuns" class="pdf-show-hide">
-                <a href="../../../assets/files/cjpaper2.pdf" class="button alt green" style="margin-bottom: 50px;">Download</a>
-                <pdf-viewer delegate-handle="my-crimeGuns-container" url="crimePaper2" scale="1.75" show-toolbar="true"></pdf-viewer>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <navigation></navigation>
+    <div ng-controller="eportfolioController" class="center">
+        <p class="mt50" style="letter-spacing: 12px; font-weight: 300; font-size: 3em;">Choose The Field of Study</p>
     </div>
-  </div>
+
+    <div class="center mt25 mb50">
+        <md-button class="md-raised" style="background-color: #0033FF; color: white;" ui-sref=".physics">Physics</md-button>
+        <span style="font-size: 1em;"> | </span>
+        <md-button class="md-raised" style="background-color: #0033FF; color: white;" ui-sref=".english">English</md-button>
+        <span style="font-size: 1em;"> | </span>
+        <md-button class="md-raised" style="background-color: #0033FF; color: white;" ui-sref=".math">Math</md-button>
+        <span style="font-size: 1em;"> | </span>
+        <md-button class="md-raised" style="background-color: #0033FF; color: white;" ui-sref=".film">Film</md-button>
+        <span style="font-size: 1em;"> | </span>
+        <md-button class="md-raised" style="background-color: #0033FF; color: white;" ui-sref=".history">History</md-button>
+        <span style="font-size: 1em;"> | </span>
+        <md-button class="md-raised" style="background-color: #0033FF; color: white;" ui-sref=".cj">Criminal Justice</md-button>
+
+    </div>
+
+    <div ui-view></div>
 </section>

@@ -1,0 +1,163 @@
+<section ng-controller="AutoLoanController as autoCtrl">
+    <div class="center mt25">
+        <md-button class="md-raised md-primary" ng-click="lease = true; finance = false">Leasing</md-button>
+        <span style="font-size: 1.5em; vertical-align: middle;">|</span>
+        <md-button class="md-raised md-primary" ng-click="finance = true; lease = false">Financing</md-button>
+    </div>
+
+    <div flex-gt-sm="150" class="center" id="lease" ng-show="lease">
+        <p style="font-size: 2em;">See what your monthly payments will be.</p>
+
+        <div flex-gt-sm="125" class="mbn35">
+            <md-input-container class="w200">
+                <label class="label-font">Vehicles MSRP</label>
+                <input md-no-asterisk class="input-font" style="letter-spacing: .1em;" ng-model="autolease.principal" ui-number-mask />
+            </md-input-container>
+        </div>
+
+        <div flex-gt-sm="125" class="mbn35">
+            <md-input-container class="w200">
+                <label class="label-font">Money Factor (eg .0012)</label>
+                <input md-no-asterisk class="input-font" style="letter-spacing: .1em;" ng-model="autolease.interest" ui-number-mask />
+            </md-input-container>
+        </div>
+
+        <div flex-gt-sm="125" class="mbn35">
+            <md-input-container class="w200">
+                <label class="label-font">Residual % of Car (eg. 57)</label>
+                <input md-no-asterisk class="input-font" style="letter-spacing: .1em;" ng-model="autolease.residual" ui-number-mask />
+            </md-input-container>
+        </div>
+
+        <div flex-gt-sm="125" class="mbn20">
+            <md-input-container class="w200">
+                <label class="label-font">Length In Months</label>
+                <md-select ng-model="autolease.months">
+                    <md-option ng-value="terms.id" ng-repeat="terms in leaseLength">{{ terms.length }}</md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+
+        <div flex-gt-sm="125" class="mbn35">
+            <md-input-container class="w200">
+                <label class="label-font">Trade In / Down Payment</label>
+                <input md-no-asterisk class="input-font" style="letter-spacing: .1em;" ng-model="autolease.down" ui-number-mask />
+            </md-input-container>
+        </div>
+
+        <div flex-gt-sm="125">
+            <md-input-container class="w200">
+                <label class="label-font">Sales Tax % (eg 6.75)</label>
+                <input md-no-asterisk class="input-font" style="letter-spacing: .1em;" ng-model="autolease.tax" ui-number-mask />
+            </md-input-container>
+        </div>
+
+        <div>
+            <md-button class="md-raised md-primary" ng-click="calculateLease(autolease)">Calculate</md-button>
+            <md-button class="md-raised md-warn" ng-click="reset(autolease)">Reset</md-button>
+        </div>
+    </div>
+
+    <div class="center mt50" ng-show="successLease">
+        <p>Monthly Payment: ${{ monthlyLease }}</p>
+    </div>
+
+    <div class="center" id="finance" ng-show="finance" style="background-color: white;">
+        <p style="font-size: 2em;">Lets estimate some loans.</p>
+
+        <div class="mbn35">
+            <md-input-container class="w175">
+                <label class="label-font">Principal Loan Amount</label>
+                <input md-no-asterisk class="input-font" style="letter-spacing: .1em;" ng-model="autofinance.principal" ui-number-mask />
+            </md-input-container>
+        </div>
+
+        <div class="mbn35">
+            <md-input-container class="w175">
+                <label class="label-font">Interest Rate (eg 3.99)</label>
+                <input md-no-asterisk class="input-font" style="letter-spacing: .1em;" ng-model="autofinance.interest" ui-number-mask />
+            </md-input-container>
+        </div>
+
+        <div class="mbn15">
+            <md-input-container class="w175">
+                <label class="label-font">Length In Months</label>
+                <md-select ng-model="autofinance.months">
+                    <md-option ng-value="terms.id" ng-repeat="terms in financeLength">{{ terms.length }}</md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+
+        <div class="mbn25">
+            <md-input-container class="w175">
+                <label class="label-font">Down Payment</label>
+                <input md-no-asterisk class="input-font" style="letter-spacing: .1em;" ng-model="autofinance.down" ui-number-mask />
+            </md-input-container>
+        </div>
+
+        <div flex-gt-sm="125" class="w200 center" style="margin-bottom: 25px;">
+        <!--<nav class="navbar navbar-default" role="navigation">-->
+            <!--<div class="navbar-header">-->
+                <!--<button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">-->
+                    <!--<span class="sr-only">Toggle navigation</span>-->
+                    <!--<span class="icon-bar"></span>-->
+                    <!--<span class="icon-bar"></span>-->
+                    <!--<span class="icon-bar"></span>-->
+                <!--</button>-->
+                <!--<a class="navbar-brand" href="#">A menu</a>-->
+            <!--</div>-->
+            <!--<div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">-->
+                <!--<ul class="nav navbar-nav">-->
+                    <!--<li><a href="#">Link 1</a></li>-->
+                    <!--<li><a href="#">Link 2</a></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</nav>-->
+            <md-button class="md-raised" ng-click="isCollapsed = !isCollapsed">Toggle Filter</md-button>
+            <div uib-collapse="isCollapsed" class="left-align mt10">
+                <md-checkbox class="md-primary" ng-model="autofinance.oneyear" ng-true-value="1" ng-false-value="0">
+                    Interest Over One Year</md-checkbox><p ng-show="autofinance.oneyear === 1">
+                First Year Interest: {{ interestOneYear | currency: "$": 2 }}</p>
+                <md-checkbox class="md-primary" ng-model="autofinance.twoyears" ng-true-value="1" ng-false-value="0">
+                    Interest Over Two Years</md-checkbox><p ng-show="autofinance.twoyears === 1">
+                Two Years of Interest: {{ interestTwoYears | currency: "$": 2 }}</p>
+                <md-checkbox class="md-primary" ng-model="autofinance.threeyears" ng-true-value="1" ng-false-value="0">
+                    Interest Over Three Years</md-checkbox><p ng-show="autofinance.threeyears === 1">
+                Three Years of Interest: {{ interestThreeYears | currency: "$": 2 }}</p>
+            </div>
+        <!--<button type="button" class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Toggle collapse Vertically</button>-->
+        <!--<div uib-collapse="isCollapsed">-->
+            <!--<div class="well well-lg">Some content</div>-->
+        <!--</div>-->
+
+        <!--<button type="button" class="btn btn-default" ng-click="isCollapsedHorizontal = !isCollapsedHorizontal">Toggle collapse Horizontally</button>-->
+        <!--<hr>-->
+        <!--<div class="horizontal-collapse" uib-collapse="isCollapsedHorizontal" horizontal>-->
+            <!--<div class="well well-lg">Some content</div>-->
+        <!--</div>-->
+
+        <!--<div flex-gt-sm="125" id="autoFilter">-->
+            <!--<md-input-container class="w175">-->
+                <!--<label class="label-font">Filter Options</label>-->
+                <!--<md-checkbox class="md-primary" ng-model="autofinance."></md-checkbox>-->
+            <!--</md-input-container>-->
+        <!--</div>-->
+        </div>
+
+        <div>
+            <md-button class="md-raised md-primary" ng-click="calculateLoan(autofinance)">Calculate</md-button>
+            <md-button class="md-raised md-warn" ng-click="reset(autofinance)">Reset</md-button>
+        </div>
+    </div>
+
+
+    <div class="center mt50" ng-show="successLoan" style="background-color: white;">
+        <p>Total Loan Amount: {{ totalLoan | currency: "$": 2 }}</p>
+        <p>Total Loan Interest: {{ totalInterest | currency: "$": 2 }}</p>
+        <p>Monthly Loan Payment: {{ monthlyFinance | currency: "$": 2 }}</p>
+        <br />
+
+
+
+    </div>
+</section>

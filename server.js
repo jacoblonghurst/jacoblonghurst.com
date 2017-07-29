@@ -27,11 +27,12 @@ app.all('/*', function(req, res, next) {
     res.sendFile('index.html', { root: __dirname + "/public" });
 });
 
+require('./routes')(app, passport);
 
 //CONNECTIONS//
 var port = 8099;
 
-app.listen(port, function(){
+app.listen(port, function() {
     console.log("Jake the Snake", port);
 });
 

@@ -1,0 +1,76 @@
+<!--        +++++++++++++++++++++++++++++++++++
+            ++       SAME SIZE 2x2           ++
+            +++++++++++++++++++++++++++++++++++
+-->
+<section ng-controller="MatrixSameSizeSolutionController as matrixCtrl">
+    <div flex-gt-sm="125" ng-show="matrixSame.size == 2">
+        <p style="font-size: 1.2em;">Input the two Matrices</p>
+        <div class="mbn35">
+            <!--    TABLE ONE, FIRST ROW       -->
+            <md-input-container class="matrix-input">
+                <input aria-label="2.1.1.1" md-no-asterisk class="matrix-input" ng-model="matrixSame._2_1_1_1" />
+            </md-input-container>
+            <md-input-container class="matrix-input">
+                <input aria-label="2.1.1.2" md-no-asterisk class="matrix-input" ng-model="matrixSame._2_1_1_2" />
+            </md-input-container><span style="font-size: 2em;">    |    </span>
+            <!--    TABLE TWO, FIRST ROW      -->
+            <md-input-container class="matrix-input">
+                <input aria-label="2.2.1.1" md-no-asterisk class="matrix-input" ng-model="matrixSame._2_2_1_1" />
+            </md-input-container>
+            <md-input-container class="matrix-input">
+                <input aria-label="2.2.1.2" md-no-asterisk class="matrix-input" ng-model="matrixSame._2_2_1_2" />
+            </md-input-container>
+        </div>
+
+        <div>
+            <!--    TABLE ONE, SECOND ROW       -->
+            <md-input-container class="matrix-input">
+                <input aria-label="2.1.2.1" md-no-asterisk class="matrix-input" ng-model="matrixSame._2_1_2_1" />
+            </md-input-container>
+            <md-input-container class="matrix-input">
+                <input aria-label="2.1.2.2" md-no-asterisk class="matrix-input" ng-model="matrixSame._2_1_2_2" />
+            </md-input-container><span style="font-size: 2em;">    |    </span>
+            <!--    TABLE TWO, SECOND ROW       -->
+            <md-input-container class="matrix-input">
+                <input aria-label="2.2.2.1" md-no-asterisk class="matrix-input" ng-model="matrixSame._2_2_2_1" />
+            </md-input-container>
+            <md-input-container class="matrix-input">
+                <input aria-label="2.2.2.2" md-no-asterisk class="matrix-input" ng-model="matrixSame._2_2_2_2" />
+            </md-input-container>
+        </div>
+
+        <div>
+            <md-button class="md-raised md-primary" ng-click="calculateSame(matrixSame)">Calculate</md-button>
+            <md-button class="md-raised md-warn" ng-click="reset(matrixSame)">Reset</md-button>
+        </div>
+    </div>
+
+    <div class="matrix-solution-box-outer mb50" ng-show="sameRes2x2">
+        <div class="matrix-solution-box-inner">
+            <div class="mbn35 mt20">
+                <p style="letter-spacing: .2em; font-size: 1.5em; margin-bottom: -5px;">Solution</p>
+                <!--    SOLUTION TABLE, ROW ONE      -->
+                <md-input-container class="matrix-input">
+                    <label class="matrix-label">{{ sameRes2x2['1x1'] }}</label>
+                    <input aria-label="1.1" md-no-asterisk class="matrix-input" disabled />
+                </md-input-container>
+                <md-input-container class="matrix-input">
+                    <label class="matrix-label">{{ sameRes2x2['1x2'] }}</label>
+                    <input aria-label="1.2" md-no-asterisk class="matrix-input" disabled />
+                </md-input-container>
+            </div>
+
+            <div class="mbn35">
+                <!--    SOLUTION TABLE, ROW TWO       -->
+                <md-input-container class="matrix-input">
+                    <label class="matrix-label">{{ sameRes2x2['2x1'] }}</label>
+                    <input aria-label="2.1" md-no-asterisk class="matrix-input" disabled />
+                </md-input-container>
+                <md-input-container class="matrix-input">
+                    <label class="matrix-label">{{ sameRes2x2['2x2'] }}</label>
+                    <input aria-label="2.2" md-no-asterisk class="matrix-input" disabled />
+                </md-input-container>
+            </div>
+        </div>
+    </div>
+</section>

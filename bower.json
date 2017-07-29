@@ -1,0 +1,36 @@
+{
+  "name": "jakes_website",
+  "description": "My personal website for school purposes",
+  "main": "server.js",
+  "authors": [
+    "Jacob Longhurst <jacoblonghurst@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jacoblonghurst/jacoblonghurst.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-aria": "^1.6.4",
+    "angular-ui-router": "^1.0.3",
+    "angular-resource": "^1.6.4",
+    "angular-messages": "^1.6.4",
+    "angular-animate": "^1.6.4",
+    "angular-material": "^1.1.4",
+    "angular-ui-carousel": "^0.1.9",
+    "angular-message-format": "^1.6.4",
+    "angular-ui-utils": "^3.0.0",
+    "angular-ui-bootstrap": "^2.5.0",
+    "angular-input-masks": "^2.5.0",
+    "pdfjs": "^1.8.188",
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7"
+  }
+}
